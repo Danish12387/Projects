@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS/login-page.css">
+</head>
+<body>
+    <nav>
+        <p>Personal Blogging App</p>
+        <a href="sign-up-page.html">Signup</a>
+    </nav>
+    <div class="heading">
+        <h1>Login</h1>
+    </div>
+    <div class="main">
+        <div class="sign-up-box">
+            <div class="input-box">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+            </div>
+            <button id="btn">Login</button>
+        </div>
+    </div>
+    <script>
+         const btn = document.getElementById("btn")
+         btn.addEventListener('click',()=>{
+            window.location.href = "dashboard-page.html"
+         })
+    </script>
+</body>
+</html>

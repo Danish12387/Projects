@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danish Fitness</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap" rel="stylesheet">
+<style>
+    /* CSS Reset */
+    body {
+        font-family: 'Tilt Warp', cursive;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('img/abs-g956294d74_1920.jpg');
+    }
+
+    .left {
+        position: absolute;
+        left: 60px;
+        top: 20px;
+        display: inline-block;
+        /* border: 2px solid red; */
+        
+    }
+
+    .left img {
+        width: 60px;
+        padding: 2px 20px;
+        /* filter: invert(100%); */
+    }
+
+    .left div {
+        text-align: center;
+    }
+
+    .mid {
+        display: block;
+        width: 40%;
+        margin: 20px auto;
+        /* border: 2px solid green; */
+    }
+
+    .right {
+        position: absolute;
+        right: 30px;
+        top: 33px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+    }
+
+    .navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        font-size: 18px;
+        display: inline-block;
+        position: relative;
+        margin: 0px 20px;
+        padding-bottom: 3px;
+    }
+
+    .navbar li a {
+        color: white;
+        text-decoration: none;
+        transition: all .3s ease-in-out;
+    }
+
+    .navbar li a::before {
+        content: '';
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 100%;
+        width: 0%;
+        height: 2px;
+        transition: all .3s ease-in-out;
+    }
+
+    .navbar li a:hover::before{
+        width: 100%;
+    }
+
+    .navbar li a:hover,
+    .navbar li a.active {
+        color: rgb(177, 172, 172);
+    }
+
+    .btn {
+        margin: 0px 10px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 14px;
+        cursor: pointer;
+        font-family: 'Ubuntu Mono', monospace;
+        transition: transform .2s ease-in-out, background-color .5s ease-out;
+    }
+
+    .btn:hover {
+        background-color: rgb(37, 37, 37);
+        transform: scale(1.1);
+    }
+
+    .container {
+        border: 2px solid white;
+        margin: 140px 30px;
+        padding: 75px;
+        width: 33%;
+        border-radius: 28px;
+    }
+
+    .form-group input {
+        text-align: center;
+        display: block;
+        width: 344px;
+        padding: 6px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 15px;
+        border-radius: 18px;
+        font-family: 'Tilt Warp', cursive;
+
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    .container button {
+        display: block;
+        width: 354px;
+        margin: 20px auto;
+
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- left box for logo -->
+        <div class="left">
+           <a href="index.html" style="text-decoration: none; color: white;"><img src="img/white-dumbbell-gym-logo-black-background-workout-sign-vector-template-172909186.jpg" alt="">
+            <div>Danish Fitness</div></a>
+        </div>
+        <!-- mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a> </li>
+                <li><a href="#">About Us</a> </li>
+                <li><a href="#">Fitness Calculator</a> </li>
+                <li><a href="#">Contact Us</a> </li>
+            </ul>
+        </div>
+        <!-- rigth box for buttons -->
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Email Us</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the best gym of Karachi now</h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Age" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Gender" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Locality" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Phone Number" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Emai id" required>
+            </div>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

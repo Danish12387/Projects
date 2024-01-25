@@ -1,0 +1,384 @@
+/* Css Reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 59px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+/* Navigation Bar:Logo and Image  */
+#logo {
+    margin: 10px 34px;
+    cursor: pointer;
+}
+
+#logo img {
+    height: 40px;
+    margin: 3px 6px;
+}
+
+/* Navigation Bar:List Styling */
+#navbar ul {
+    display: flex;
+    /* font-family: 'Baloo Bhai 2', cursive; */
+    font-family: 'Bree Serif', serif;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .2;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    transform: scale(1.1);
+    background-color: white;
+}
+
+/* Home Section  */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 300px;
+    height: 720px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('../img/spaghetti-g7da50646d_1920.jpg') no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+
+#home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+}
+
+#home p {
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* Services Section  */
+#services {
+    margin: 20px 55px;
+    display: flex;
+}
+
+#services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 5px;
+    border-radius: 29px;
+    background: #f2f2f2;
+}
+
+#services .box img {
+    height: 160px;
+    margin: auto;
+    display: block;
+}
+
+#services .box p {
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* Clients Section  */
+#client-section {
+    height: 445px
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('../img/contact-us-1908762__340.webp')no-repeat center center/cover;
+    width: 100%;
+    height: 54%;
+    z-index: -1;
+    opacity: .4;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 14px;
+}
+
+#clients img {
+    height: 75px;
+}
+
+/* Contact Section  */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: .7;
+    background: url('../img/contact-us-customer-support-hotline-people-connect-call-customer-support-contact-us-customer-support-hotline-people-connect-call-129786983.jpg') no-repeat center center/cover;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contact-box form {
+    width: 30%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Bree Serif', serif;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Ulitilty Classes */
+.h-primary {
+    font-size: 3.3rem;
+    font-family: 'Bree Serif', serif;
+    padding: 6px;
+}
+
+.h-secondary {
+    font-size: 2.1rem;
+    font-family: 'Bree Serif', serif;
+    padding: 12px;
+}
+
+.btn {
+    width: 130px;
+    height: 41px;
+    /* padding: 16px 6px; */
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform .2s ease-in-out, background-color .4s ease-in-out;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background-color: rgb(146, 5, 5);
+}
+
+.center {
+    text-align: center;
+}
+
+#messege {
+    height: 120px;
+}
+
+.bit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.but {
+    width: 31%;
+    margin-bottom: 30px;
+    padding: 6px;
+    margin-left: 19px;
+    border-radius: 9px;
+    background-color: rgb(84, 192, 255);
+    border: 1px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.bit :hover {
+    background-color: rgb(38, 171, 248);
+    color: whitesmoke;
+    border: 1px solid rgb(0, 0, 0);
+}
+@media (max-width:1100px) and (min-width:501px){
+    #home::before{
+        height: 700px;
+    }
+    #home{
+        height: 600px;
+        padding: 0;
+    }
+    .h-primary{
+        font-size: 37px;
+    }
+    #home p{
+        font-size: 23px;
+        width: 500px;
+    }
+    #contact-box form{
+        width: 50%;
+    }
+    .bit .but{
+        width: 52%;
+    }
+    #clients img{
+        height: 100px;
+    }
+}
+@media (max-width:700px){
+    #clients img{
+        height: 60px;
+    }
+    #client-section::before {
+        width: 100%;
+        height: 34%;
+    }
+    #client-section {
+        height: 300px;
+    }
+}
+@media (max-width:600px){
+    #services{
+        font-size: 1rem;
+    }
+    #services .box img{
+        height: 120px;
+    }
+    .h-secondary{
+        font-size: 25px;
+    }
+}
+@media (max-width:500px){
+    .h-primary{
+        font-size: 29px;
+    }
+    #home p{
+        font-size: 18px;
+        width: 80%;
+    }
+    #navbar ul li{
+        font-size: 1.1rem;
+    }
+    #navbar ul li a{
+        padding: 3px 16px;
+    }
+    #contact-box form{
+        width: 70%;
+    }
+    .bit .but{
+        width: 72%;
+    }
+    footer{
+        padding: 16px 0;
+    }
+    #clients img{
+        height: 45px;
+    }
+    #client-section::before {
+        height: 30%;
+    }
+    #client-section {
+        height: 200px;
+    }
+    #services{
+        font-weight: bold;
+        font-size: .8rem;
+    }
+    #home{
+        height: 450px;
+        padding: 0;
+    }
+    #home::before{
+        height: 500px;
+    }
+    #services {
+        margin: 20px 10px;
+    }
+}
+@media (max-width:400px){
+    #navbar ul li{
+        font-size: 1rem;
+    }
+    #client-section::before {
+        height: 25%;
+        opacity: 0.1;
+    }
+    .client-item {
+        padding: 10px;
+    }
+    #client-section {
+        height: 150px;
+    }
+    footer{
+        font-size: 12px;
+    }
+}

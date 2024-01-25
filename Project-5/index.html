@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Game</title>
+</head>
+
+<body>
+    <div class="start_main">
+        <div class="start_div">
+            <div>
+                <h2>Let's Play</h2>
+                <h3>Rock, Paper, Scissor</h3>
+                <h4>INSTRUCTION:</h4>
+                <h4>1: First, you select any one of them.</h4>
+                <h4>2: Player 2 will select any one of them.</h4>
+                <h4>3: Computer will judge the winner.</h4>
+                <h3>Are you Ready?</h3>
+                <h4 style="margin: 0; padding: 0; text-align: center; color: rgb(0, 116, 211);">Let's go!
+                </h4>
+            </div>
+            <button id="start_btn">Start</button>
+        </div>
+    </div>
+    <div class="dashboard">
+        <div class="upper_div">
+            <div class="your_scores">
+                <h3>You</h3>
+                <p>Scores: <span>0</span></p>
+            </div>
+            <h2 id="suggestion">Select one of them!</h2>
+            <div class="player2_scores">
+                <h3>Player 2</h3>
+                <p>Scores: <span>0</span></p>
+            </div>
+        </div>
+        <div class="options_div">
+            <h3 class="options same transformIs rock">ROCK</h3>
+            <h3 class="options same transformIs scissor">SCISSOR</h3>
+            <h3 class="options same transformIs paper">PAPER</h3>
+        </div>
+        <div class="player_2">
+            <h3 id="option_1" class="same rock" style="cursor: not-allowed;">ROCK</h3>
+            <h3 id="option_2" class="same scissor" style="cursor: not-allowed;">SCISSOR</h3>
+            <h3 id="option_3" class="same paper" style="cursor: not-allowed;">PAPER</h3>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

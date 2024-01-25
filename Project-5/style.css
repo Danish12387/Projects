@@ -1,0 +1,133 @@
+body {
+    font-family: sans-serif;
+    height: 95vh;
+    margin: 0;
+    padding: 0;
+}
+
+.start_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.start_div {
+    height: 450px;
+    width: 350px;
+    background-color: navajowhite;
+    border-radius: 50px;
+    color: rgb(32, 32, 32);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 1px 1px 5px 1px grey;
+}
+
+.start_div h2 {
+    text-align: center;
+}
+
+.start_div h3 {
+    text-align: center;
+}
+
+.start_div button {
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(0, 136, 247);
+    color: white;
+    font-size: 16px;
+    box-shadow: 1px 1px 5px 1px rgb(0, 55, 100);
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+
+.start_div button:hover {
+    transform: scale(1.05);
+    background-color: rgb(0, 125, 228);
+}
+
+.dashboard {
+    /* display: none; */
+}
+
+.dashboard .upper_div {
+    background-color: navajowhite;
+    margin: 0px 100px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    box-shadow: 1px 1px 5px 1px grey;
+}
+
+/* .dashboard .upper_div .scores {} */
+
+.options_div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 600px;
+    margin: auto;
+    display: none;
+}
+
+.player_2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 600px;
+    margin: auto;
+}
+
+.same {
+    height: 100px;
+    width: 100px;
+    /* background-color: rgb(0, 223, 0); */
+    box-shadow: 1px 1px 5px 1px grey;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: all .2s ease-out;
+    cursor: pointer;
+}
+
+.rock {
+    background-color: rgb(114, 114, 114);
+    border: 2px solid rgb(82, 82, 82);
+}
+
+.scissor {
+    background-color: rgb(160, 160, 160);
+    border: 2px solid rgb(114, 114, 114);
+}
+
+.paper {
+    background-color: rgb(204, 204, 204);
+    border: 2px solid rgb(160, 160, 160);   
+}
+
+.transformIs:hover {
+    transform: scale(1.1);
+}
+
+.transform {
+    transform: scale(1.1);
+    border: 2px solid rgb(39, 39, 39) !important;
+    box-shadow: 1px 1px 5px 1px grey;
+    cursor: none;
+}
+
+#suggestion{
+    width: 270px;
+    text-align: center;
+}

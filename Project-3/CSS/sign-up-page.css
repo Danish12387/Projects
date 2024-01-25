@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+nav{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(111, 0, 255);
+    color: white;
+}
+nav p{
+    margin-left: 150px;
+    font-size: 17px;
+    font-weight: bold;
+}
+nav a{
+    margin-right: 150px;
+    text-decoration: none;
+    color: white;
+}
+.heading{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.heading h1{
+    margin-left: 150px;
+}
+.main{
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sign-up-box{
+    height: 410px;
+    width: 390px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 5px 1px rgb(221, 221, 221);
+}
+.sign-up-box input{
+    height: 30px;
+    width: 250px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 10px;
+    font-size: 14px;
+}
+.sign-up-box input:focus{
+    outline: 1px solid rgb(176, 116, 255);
+    box-shadow: 0px 0px 5px 1px rgb(195, 148, 255);
+}
+.sign-up-box input::placeholder{
+    font-size: 14px;
+}
+.input-box{
+    height: 270px;
+}
+.sign-up-box button{
+    height: 35px;
+    width: 80px;
+    background-color: rgb(141, 54, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+}
+.sign-up-box button:hover{
+    transform: scale(1.05);
+}
