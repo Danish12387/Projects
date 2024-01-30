@@ -25,27 +25,40 @@
             <button id="start_btn">Start</button>
         </div>
     </div>
-    <div class="dashboard">
-        <div class="upper_div">
-            <div class="your_scores">
-                <h3>You</h3>
-                <p>Scores: <span>0</span></p>
+    <div id="main_div">
+        <div class="dashboard">
+            <div class="dashboard_main">
+                <button id="quit_btn" class="btns" popovertarget="popup_div">Quit Game</button>
+                <button id="restart_btn" class="btns">Restart Game</button>
+                <div popover id="popup_div">
+                    <h2>Do you want to Quit?</h2>
+                    <div style="margin-left: 17px;">
+                        <button class="cancel">Cancel</button>
+                        <button class="okBtn">OK</button>
+                    </div>
+                </div>
+                <div class="upper_div">
+                    <div class="your_scores">
+                        <h3>You</h3>
+                        <p>Scores: <span id="you_scores">0</span></p>
+                    </div>
+                    <h2 id="suggestion">Select one of them!</h2>
+                    <div class="player2_scores">
+                        <h3>Paul</h3>
+                        <p>Scores: <span id="paul_scores">0</span></p>
+                    </div>
+                </div>
+                <div class="options_div">
+                    <h3 class="options same transformIs rock">ROCK</h3>
+                    <h3 class="options same transformIs scissor">SCISSOR</h3>
+                    <h3 class="options same transformIs paper">PAPER</h3>
+                </div>
+                <div class="player_2">
+                    <h3 id="option_1" class="same rock" style="cursor: not-allowed;">ROCK</h3>
+                    <h3 id="option_2" class="same scissor" style="cursor: not-allowed;">SCISSOR</h3>
+                    <h3 id="option_3" class="same paper" style="cursor: not-allowed;">PAPER</h3>
+                </div>
             </div>
-            <h2 id="suggestion">Select one of them!</h2>
-            <div class="player2_scores">
-                <h3>Player 2</h3>
-                <p>Scores: <span>0</span></p>
-            </div>
-        </div>
-        <div class="options_div">
-            <h3 class="options same transformIs rock">ROCK</h3>
-            <h3 class="options same transformIs scissor">SCISSOR</h3>
-            <h3 class="options same transformIs paper">PAPER</h3>
-        </div>
-        <div class="player_2">
-            <h3 id="option_1" class="same rock" style="cursor: not-allowed;">ROCK</h3>
-            <h3 id="option_2" class="same scissor" style="cursor: not-allowed;">SCISSOR</h3>
-            <h3 id="option_3" class="same paper" style="cursor: not-allowed;">PAPER</h3>
         </div>
     </div>
     <script src="script.js"></script>
