@@ -19,6 +19,10 @@ const popupDiv = document.getElementById('popup_div');
 const cancel = document.querySelector('.cancel');
 const mainDiv = document.getElementById('main_div');
 const okBtn = document.querySelector('.okBtn');
+const instructions = document.getElementById('instructions');
+const instructinsDiv = document.getElementById('instructions_div');
+const startUpperDiv = document.getElementById('start_upper_div');
+const instDivBtn = document.getElementById('btn');
 let setYouScores = 0;
 let setPaulScores = 0;
 let youSelectedOption;
@@ -40,6 +44,16 @@ okBtn.addEventListener('click', ()=>{
     dashboard.style.display = 'none'
     mainDiv.classList.remove('main_div')
     popupDiv.style.display = 'none'
+})
+
+instructions.addEventListener('click', ()=>{
+    instructinsDiv.style.display = 'block'
+    startUpperDiv.style.display = 'none'
+})
+
+instDivBtn.addEventListener('click', ()=>{
+    instructinsDiv.style.display = 'none'
+    startUpperDiv.style.display = 'block'
 })
 
 startBtn.addEventListener('click', () => {
@@ -87,6 +101,7 @@ function game() {
 
             options[i].classList.add('transform');
             youSelectedOption = options[i].innerHTML;
+            console.log(youSelectedOption);
             suggestion.innerHTML = 'Good!'
 
             setTimeout(() => {

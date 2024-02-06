@@ -5,24 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Game</title>
 </head>
 
 <body>
     <div class="start_main">
         <div class="start_div">
-            <div>
+            <div id="start_upper_div">
+                <img src="Rock Paper Scissors game design.jpeg" />
                 <h2>Let's Play</h2>
                 <h3>Rock, Paper, Scissor</h3>
-                <h4>INSTRUCTION:</h4>
-                <h4>1: First, you select any one of them.</h4>
-                <h4>2: Player 2 will select any one of them.</h4>
-                <h4>3: Computer will judge the winner.</h4>
                 <h3>Are you Ready?</h3>
                 <h4 style="margin: 0; padding: 0; text-align: center; color: rgb(0, 116, 211);">Let's go!
                 </h4>
+                <button id="start_btn">Start</button>
+                <span id="instructions">See the Instruction?</span>
             </div>
-            <button id="start_btn">Start</button>
+            <div id="instructions_div">
+                <h1>INSTRUCTION:</h1>
+                <h3>1: First, you select any one of them.</h3>
+                <h3>2: Second, Paul will select any one of them.</h3>
+                <h3>3: Computer will judge the winner.</h3>
+                <button id="btn"><i class="fa-solid fa-angle-left"></i> Back</button>
+            </div>
         </div>
     </div>
     <div id="main_div">
@@ -49,14 +55,31 @@
                     </div>
                 </div>
                 <div class="options_div">
-                    <h3 class="options same transformIs rock">ROCK</h3>
-                    <h3 class="options same transformIs scissor">SCISSOR</h3>
-                    <h3 class="options same transformIs paper">PAPER</h3>
+                    <div>
+                        <div class="same transformIs rock">
+                            <img height="90px" width="90px" src="hand rock.jpeg">
+                        </div>
+                        <h3>ROCK</h3>
+                    </div>
+
+                    <div>
+                        <div class="same transformIs scissor">
+                            <img height="90px" width="90px" src="hand paper.jpeg">
+                        </div>
+                        <h3 class="options">PAPER</h3>
+                    </div>
+
+                    <div>
+                        <div class="same transformIs paper">
+                            <img height="90px" width="90px" src="hand scissor.jpeg">
+                        </div>
+                        <h3 class="options">SCISSOR</h3>
+                    </div>
                 </div>
                 <div class="player_2">
-                    <h3 id="option_1" class="same rock" style="cursor: not-allowed;">ROCK</h3>
-                    <h3 id="option_2" class="same scissor" style="cursor: not-allowed;">SCISSOR</h3>
-                    <h3 id="option_3" class="same paper" style="cursor: not-allowed;">PAPER</h3>
+                    <div id="option_1" class="same rock" style="cursor: not-allowed;">ROCK</div>
+                    <div id="option_2" class="same scissor" style="cursor: not-allowed;">SCISSOR</div>
+                    <div id="option_3" class="same paper" style="cursor: not-allowed;">PAPER</div>
                 </div>
             </div>
         </div>

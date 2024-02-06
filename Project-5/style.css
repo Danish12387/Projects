@@ -12,45 +12,91 @@ body {
     justify-content: center;
     height: 100%;
     width: 100%;
+    display: none;
 }
 
 .start_div {
-    height: 450px;
-    width: 350px;
-    background-color: rgb(238, 222, 0);
+    height: 550px;
+    width: 650px;
+    padding: 5px;
     border-radius: 50px;
     color: rgb(32, 32, 32);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    box-shadow: 1px 1px 5px 1px grey;
+    /* justify-content: space-around; */
+    /* box-shadow: 1px 1px 5px 1px grey; */
 }
 
-.start_div h2 {
+.start_div #instructions_div {
+    display: none;
+    height: 300px;
+    margin: auto;
+}
+
+.start_div #instructions_div h1 {
     text-align: center;
 }
 
-.start_div h3 {
-    text-align: center;
-}
-
-.start_div button {
-    width: 140px;
+.start_div #instructions_div #btn {
     height: 40px;
-    border-radius: 10px;
+    width: 100px;
     border: none;
-    background-color: rgb(0, 136, 247);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all .2s ease-out;
+    margin: 0 15px;
+    font-size: 15px;
+    background-color: rgb(0, 153, 255);
     color: white;
-    font-size: 16px;
-    box-shadow: 1px 1px 5px 1px rgb(0, 55, 100);
+    border: none !important;
+}
+
+.start_div #instructions_div #btn:hover {
+    background-color: rgb(0, 134, 223);
+}
+
+.start_div img {
+    height: 300px;
+    width: 300px;
+}
+
+.start_div #start_upper_div h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.start_div #start_upper_div h3 {
+    text-align: center;
+}
+
+.start_div span {
+    text-align: center;
+    color: grey;
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.start_div #start_upper_div button {
+    width: 300px;
+    height: 48px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(250, 208, 0);
+    /* color: white; */
+    font-size: 18px;
+    font-weight: 500;
     cursor: pointer;
     transition: all .2s ease-out;
+    margin-top: 20px;
 }
 
-.start_div button:hover {
-    transform: scale(1.05);
-    background-color: rgb(0, 125, 228);
+.start_div #start_upper_div button:hover {
+    transform: scale(1.03);
+    background-color: rgb(250, 195, 0);
+    box-shadow: 1px 1px 6px 1px rgb(95, 95, 95);
 }
 
 .main_div {
@@ -70,11 +116,11 @@ body {
 }
 
 #main_div {
-    display: none;
+    display: flex;
 }
 
 .dashboard {
-    display: none;
+    display: flex;
     width: 90%;
     margin: auto;
     display: flex;
@@ -172,6 +218,11 @@ body {
     justify-content: space-around;
     width: 600px;
     margin: auto;
+    margin-top: 50px;
+}
+
+.options_div h3{
+    text-align: center;
 }
 
 .player_2 {
@@ -197,17 +248,17 @@ body {
 }
 
 .rock {
-    background-color: rgb(114, 114, 114);
+    /* background-color: rgb(114, 114, 114); */
     border: 2px solid rgb(82, 82, 82);
 }
 
 .scissor {
-    background-color: rgb(160, 160, 160);
+    /* background-color: rgb(160, 160, 160); */
     border: 2px solid rgb(114, 114, 114);
 }
 
 .paper {
-    background-color: rgb(204, 204, 204);
+    /* background-color: rgb(204, 204, 204); */
     border: 2px solid rgb(160, 160, 160);   
 }
 
