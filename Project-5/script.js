@@ -101,7 +101,6 @@ function game() {
 
             options[i].classList.add('transform');
             youSelectedOption = options[i].innerHTML;
-            console.log(youSelectedOption);
             suggestion.innerHTML = 'Good!'
 
             setTimeout(() => {
