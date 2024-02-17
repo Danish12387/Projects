@@ -1,0 +1,61 @@
+@media (max-width: 1024px) {
+    /* about section  */
+
+}
+
+@media (max-width: 991px) {
+    
+    /* custom classes */
+    .text-content {
+        width: 100%;
+    }
+
+    /* navbar brand */
+    .navigation-wrap .navbar-brand img {
+        height: 3.8125rem;
+    }
+    .navigation-wrap {
+        text-align: center;
+    }
+    .navigation-wrap .nav-link {
+        line-height: 1.875rem;
+    }
+
+    /* Banner Design */
+    .top-banner {
+        padding: 9.375rem 0 9.375rem;
+
+    /* carousel design */
+
+}
+
+@media (max-width: 767px) {
+
+    /* custom css */
+    h1{
+        font-size: 2.8rem;
+    }
+    h2{
+        font-size: 2rem;
+        line-height: 2.0625rem;
+    }
+
+    /* top banner */
+    .top-banner {
+        padding: 10.875rem 0 9.375rem;
+    }
+
+    /* story section */
+
+    /* carousel design */
+
+    /* newlettar */
+
+    /* footer link */
+
+}
+
+@media (max-width: 330px) {
+        /* carousel design */
+        
+}
