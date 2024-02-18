@@ -29,29 +29,29 @@ let youSelectedOption;
 let paulSelectedOption;
 let IsTrue = false;
 
-quitBtn.addEventListener('click', ()=>{
+quitBtn.addEventListener('click', () => {
     popupDiv.style.display = 'block'
     mainDiv.classList.add('main_div')
 })
 
-cancel.addEventListener('click', ()=>{
+cancel.addEventListener('click', () => {
     popupDiv.style.display = 'none'
     mainDiv.classList.remove('main_div')
 })
 
-okBtn.addEventListener('click', ()=>{
+okBtn.addEventListener('click', () => {
     startDiv.style.display = 'flex'
     dashboard.style.display = 'none'
     mainDiv.classList.remove('main_div')
     popupDiv.style.display = 'none'
 })
 
-instructions.addEventListener('click', ()=>{
+instructions.addEventListener('click', () => {
     instructinsDiv.style.display = 'block'
     startUpperDiv.style.display = 'none'
 })
 
-instDivBtn.addEventListener('click', ()=>{
+instDivBtn.addEventListener('click', () => {
     instructinsDiv.style.display = 'none'
     startUpperDiv.style.display = 'block'
 })
@@ -90,81 +90,82 @@ function game() {
         options[i].classList.remove('transform');
         options[i].classList.add('transformIs');
         options[i].style.cursor = 'pointer'
+    }
 
-        options[i].addEventListener('click', () => {
+    this.addEventListener('click', () => {
 
-            for (let i = 0; i < options.length; i++) {
-                options[i].classList.remove('transform');
-                options[i].classList.remove('transformIs');
-                options[i].style.cursor = 'not-allowed'
+        for (let i = 0; i < options.length; i++) {
+            options[i].classList.remove('transform');
+            options[i].classList.remove('transformIs');
+            options[i].style.cursor = 'not-allowed'
+        }
+
+        options[i].classList.add('transform');
+        youSelectedOption = options[i].innerHTML;
+        suggestion.innerHTML = 'Good!'
+
+        setTimeout(() => {
+            arr.forEach(item => {
+                item.classList.remove('transform');
+            })
+
+            suggestion.innerHTML = "Now Paul's Turn!"
+            youOptionDiv.style.display = 'none';
+            player2Div.style.display = 'flex';
+
+        }, 1000);
+
+        setTimeout(() => {
+            suggestion.innerHTML = "Paul is choosing!"
+        }, 2000);
+
+        setTimeout(() => {
+            player2()
+        }, 3000);
+
+        setTimeout(() => {
+            if (paulSelectedOption === youSelectedOption) {
+                suggestion.innerHTML = "Tie!"
             }
 
-            options[i].classList.add('transform');
-            youSelectedOption = options[i].innerHTML;
-            suggestion.innerHTML = 'Good!'
+            if (paulSelectedOption === 'PAPER' && youSelectedOption === 'ROCK') {
+                suggestion.innerHTML = 'No Winner!'
+            }
 
-            setTimeout(() => {
-                arr.forEach(item => {
-                    item.classList.remove('transform');
-                })
+            if (paulSelectedOption === 'ROCK' && youSelectedOption === 'PAPER') {
+                suggestion.innerHTML = 'No Winner!'
+            }
 
-                suggestion.innerHTML = "Now Paul's Turn!"
-                youOptionDiv.style.display = 'none';
-                player2Div.style.display = 'flex';
+            if (paulSelectedOption === 'SCISSOR' && youSelectedOption === 'ROCK') {
+                suggestion.innerHTML = 'You Win!'
+                setYouScores++
+                youScores.innerHTML = setYouScores;
+            }
 
-            }, 1000);
+            if (paulSelectedOption === 'ROCK' && youSelectedOption === 'SCISSOR') {
+                suggestion.innerHTML = 'Paul Win!'
+                setPaulScores++
+                paulScores.innerHTML = setPaulScores;
+            }
 
-            setTimeout(() => {
-                suggestion.innerHTML = "Paul is choosing!"
-            }, 2000);
+            if (paulSelectedOption === 'PAPER' && youSelectedOption === 'SCISSOR') {
+                suggestion.innerHTML = 'You Win!'
+                setYouScores++
+                youScores.innerHTML = setYouScores;
+            }
 
-            setTimeout(() => {
-                player2()
-            }, 3000);
+            if (paulSelectedOption === 'SCISSOR' && youSelectedOption === 'PAPER') {
+                suggestion.innerHTML = 'Paul Win!'
+                setPaulScores++
+                paulScores.innerHTML = setPaulScores;
+            }
+        }, 4000);
+    })
 
-            setTimeout(() => {
-                if (paulSelectedOption === youSelectedOption) {
-                    suggestion.innerHTML = "Tie!"
-                }
+    setTimeout(() => {
+        IsTrue = true;
+    }, 5000);
 
-                if (paulSelectedOption === 'PAPER' && youSelectedOption === 'ROCK') {
-                    suggestion.innerHTML = 'No Winner!'
-                }
-                
-                if (paulSelectedOption === 'ROCK' && youSelectedOption === 'PAPER') {
-                    suggestion.innerHTML = 'No Winner!'
-                }
-
-                if (paulSelectedOption === 'SCISSOR' && youSelectedOption === 'ROCK') {
-                    suggestion.innerHTML = 'You Win!'
-                    setYouScores++
-                    youScores.innerHTML = setYouScores;
-                }
-
-                if (paulSelectedOption === 'ROCK' && youSelectedOption === 'SCISSOR') {
-                    suggestion.innerHTML = 'Paul Win!'
-                    setPaulScores++
-                    paulScores.innerHTML = setPaulScores;
-                }
-
-                if (paulSelectedOption === 'PAPER' && youSelectedOption === 'SCISSOR') {
-                    suggestion.innerHTML = 'You Win!'
-                    setYouScores++
-                    youScores.innerHTML = setYouScores;
-                }
-
-                if (paulSelectedOption === 'SCISSOR' && youSelectedOption === 'PAPER') {
-                    suggestion.innerHTML = 'Paul Win!'
-                    setPaulScores++
-                    paulScores.innerHTML = setPaulScores;
-                }
-            }, 4000);
-        })
-
-            setTimeout(() => {
-                IsTrue = true;
-            }, 5000);
-    }
 }
 
 game();
