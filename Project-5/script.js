@@ -1,8 +1,5 @@
 const startDiv = document.querySelector('.start_main');
 const startBtn = document.getElementById('start_btn');
-const rock = document.getElementById('rock');
-const paper = document.getElementById('paper');
-const scissor = document.getElementById('scissor');
 const suggestion = document.getElementById('suggestion');
 const options = document.getElementsByClassName('options');
 const dashboard = document.querySelector('.dashboard')
@@ -10,7 +7,7 @@ const option1 = document.getElementById('option_1');
 const option2 = document.getElementById('option_2');
 const option3 = document.getElementById('option_3');
 const player2Div = document.querySelector('.player_2');
-const youOptionDiv = document.querySelector(".options_div");
+const myOptionDiv = document.querySelector(".options_div");
 const restartBtn = document.getElementById('restart_btn');
 const youScores = document.getElementById('you_scores');
 const paulScores = document.getElementById('paul_scores');
@@ -23,6 +20,10 @@ const instructions = document.getElementById('instructions');
 const instructinsDiv = document.getElementById('instructions_div');
 const startUpperDiv = document.getElementById('start_upper_div');
 const instDivBtn = document.getElementById('btn');
+const playAgainSug = document.getElementById('play_again_sug');
+const rock = document.getElementById('rock')
+const paper = document.getElementById('paper')
+const scissor = document.getElementById('scissor')
 let setYouScores = 0;
 let setPaulScores = 0;
 let youSelectedOption;
@@ -63,104 +64,91 @@ startBtn.addEventListener('click', () => {
 })
 
 const arr = [option1, option2, option3];
+const choices = ['R', 'P', 'S'];
 
 function player2() {
     arr.forEach(item => {
         item.classList.remove('transform');
     })
-    const randomNum = Math.ceil(Math.random() * 3);
-    arr[randomNum - 1].classList.add('transform');
-    paulSelectedOption = arr[randomNum - 1].innerHTML;
+    const randomNum = Math.floor(Math.random() * 3);
+    arr[randomNum].classList.add('transform');
+    paulSelectedOption = choices[randomNum];
 }
 
 restartBtn.addEventListener('click', () => {
     if (IsTrue) {
-        youOptionDiv.style.display = 'flex';
+        myOptionDiv.style.display = 'flex';
         player2Div.style.display = 'none';
         suggestion.innerHTML = 'Select one of them!'
-        game();
+        playAgainSug.style.display = 'none'
+
+        for (let i = 0; i < options.length; i++) {
+            options[i].classList.remove('transform');
+            options[i].classList.add('transformIs');
+            options[i].style.cursor = 'pointer'
+        }
+        rock.addEventListener('click', clickHandler);
+        paper.addEventListener('click', clickHandler);
+        scissor.addEventListener('click', clickHandler);
         IsTrue = false;
     }
 })
 
-function game() {
+const clickHandler = (event, choice) => {
+    const selectedOption = event.target;
+    game(selectedOption, choice);
+};
+
+
+rock.addEventListener('click', (e) => {
+    clickHandler(e, 'R')
+});
+
+paper.addEventListener('click', (e) => {
+    clickHandler(e, 'P')
+});
+
+scissor.addEventListener('click', (e) => {
+    clickHandler(e, 'S')
+});
+
+function game(selectedOption, choice) {
+    rock.removeEventListener('click', clickHandler);
+    paper.removeEventListener('click', clickHandler);
+    scissor.removeEventListener('click', clickHandler);
 
     for (let i = 0; i < options.length; i++) {
-
         options[i].classList.remove('transform');
-        options[i].classList.add('transformIs');
-        options[i].style.cursor = 'pointer'
+        options[i].classList.remove('transformIs');
+        options[i].style.cursor = 'not-allowed'
     }
 
-    this.addEventListener('click', () => {
+    selectedOption.classList.add('transform');
+    youSelectedOption = choice;
+    suggestion.innerHTML = 'Good!'
 
-        for (let i = 0; i < options.length; i++) {
-            options[i].classList.remove('transform');
-            options[i].classList.remove('transformIs');
-            options[i].style.cursor = 'not-allowed'
-        }
+    setTimeout(() => {
+        arr.forEach(item => {
+            item.classList.remove('transform');
+        })
 
-        options[i].classList.add('transform');
-        youSelectedOption = options[i].innerHTML;
-        suggestion.innerHTML = 'Good!'
+        suggestion.innerHTML = "Now Paul's Turn!"
+        myOptionDiv.style.display = 'none';
+        player2Div.style.display = 'flex';
 
-        setTimeout(() => {
-            arr.forEach(item => {
-                item.classList.remove('transform');
-            })
+    }, 1000);
 
-            suggestion.innerHTML = "Now Paul's Turn!"
-            youOptionDiv.style.display = 'none';
-            player2Div.style.display = 'flex';
+    setTimeout(() => {
+        suggestion.innerHTML = "Paul is choosing!"
+    }, 2000);
 
-        }, 1000);
+    setTimeout(() => {
+        player2()
+    }, 3000);
 
-        setTimeout(() => {
-            suggestion.innerHTML = "Paul is choosing!"
-        }, 2000);
-
-        setTimeout(() => {
-            player2()
-        }, 3000);
-
-        setTimeout(() => {
-            if (paulSelectedOption === youSelectedOption) {
-                suggestion.innerHTML = "Tie!"
-            }
-
-            if (paulSelectedOption === 'PAPER' && youSelectedOption === 'ROCK') {
-                suggestion.innerHTML = 'No Winner!'
-            }
-
-            if (paulSelectedOption === 'ROCK' && youSelectedOption === 'PAPER') {
-                suggestion.innerHTML = 'No Winner!'
-            }
-
-            if (paulSelectedOption === 'SCISSOR' && youSelectedOption === 'ROCK') {
-                suggestion.innerHTML = 'You Win!'
-                setYouScores++
-                youScores.innerHTML = setYouScores;
-            }
-
-            if (paulSelectedOption === 'ROCK' && youSelectedOption === 'SCISSOR') {
-                suggestion.innerHTML = 'Paul Win!'
-                setPaulScores++
-                paulScores.innerHTML = setPaulScores;
-            }
-
-            if (paulSelectedOption === 'PAPER' && youSelectedOption === 'SCISSOR') {
-                suggestion.innerHTML = 'You Win!'
-                setYouScores++
-                youScores.innerHTML = setYouScores;
-            }
-
-            if (paulSelectedOption === 'SCISSOR' && youSelectedOption === 'PAPER') {
-                suggestion.innerHTML = 'Paul Win!'
-                setPaulScores++
-                paulScores.innerHTML = setPaulScores;
-            }
-        }, 4000);
-    })
+    setTimeout(() => {
+        checkWinner()
+    }, 4000);
 
     setTimeout(() => {
         IsTrue = true;
@@ -168,4 +156,43 @@ function game() {
 
 }
 
-game();
+function win() {
+    suggestion.innerHTML = 'You Win!'
+    setYouScores++
+    youScores.innerHTML = setYouScores;
+    playAgainSug.style.display = 'block'
+}
+
+function lose() {
+    suggestion.innerHTML = 'Paul Win!'
+    setPaulScores++
+    paulScores.innerHTML = setPaulScores;
+    playAgainSug.style.display = 'block'
+}
+
+function draw() {
+    suggestion.innerHTML = "Tie!"
+    playAgainSug.style.display = 'block'
+}
+
+function checkWinner() {
+
+    switch (youSelectedOption + paulSelectedOption) {
+        case 'RS':
+        case 'PR':
+        case 'SP':
+            win()
+            break;
+        case 'RP':
+        case 'PS':
+        case 'SR':
+            lose()
+            break;
+        case 'RR':
+        case 'PP':
+        case 'SS':
+            draw()
+            break;
+    }
+
+}

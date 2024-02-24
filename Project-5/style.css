@@ -24,8 +24,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* justify-content: space-around; */
-    /* box-shadow: 1px 1px 5px 1px grey; */
 }
 
 .start_div #instructions_div {
@@ -208,6 +206,7 @@ body {
     margin-top: 20px;
     box-shadow: 1px 1px 5px 1px grey;
     width: 100%;
+    height: 110px;
 }
 
 .options_div{
@@ -261,4 +260,12 @@ body {
 #suggestion{
     width: 270px;
     text-align: center;
+}
+
+.rock_icon {
+    font-size: 32px;
+}
+
+#play_again_sug{
+    display: none;
 }
