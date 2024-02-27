@@ -232,9 +232,13 @@ body {
     margin-top: 50px;
 }
 
+.player_2 h3 {
+    text-align: center;
+}
+
 .same {
-    height: 100px;
-    width: 100px;
+    height: 120px;
+    width: 110px;
     box-shadow: 1px 1px 5px 1px grey;
     /* color: white; */
     display: flex;

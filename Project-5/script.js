@@ -63,23 +63,11 @@ startBtn.addEventListener('click', () => {
     mainDiv.style.display = 'block'
 })
 
-const arr = [option1, option2, option3];
-const choices = ['R', 'P', 'S'];
-
-function player2() {
-    arr.forEach(item => {
-        item.classList.remove('transform');
-    })
-    const randomNum = Math.floor(Math.random() * 3);
-    arr[randomNum].classList.add('transform');
-    paulSelectedOption = choices[randomNum];
-}
-
 restartBtn.addEventListener('click', () => {
     if (IsTrue) {
         myOptionDiv.style.display = 'flex';
         player2Div.style.display = 'none';
-        suggestion.innerHTML = 'Select one of them!'
+        suggestion.innerHTML = 'Make your move!'
         playAgainSug.style.display = 'none'
 
         for (let i = 0; i < options.length; i++) {
@@ -93,6 +81,27 @@ restartBtn.addEventListener('click', () => {
         IsTrue = false;
     }
 })
+
+const arr = [option1, option2, option3];
+const choices = ['R', 'P', 'S'];
+
+function player2(choice) {
+    arr.forEach(item => {
+        item.classList.remove('transform');
+    })
+    // const randomNum = Math.floor(Math.random() * 3);
+    let randomNum = null;
+
+    while(true){
+        randomNum = Math.floor(Math.random() * 3);
+        if(choice !== choices[randomNum]) {
+            break;  
+        }
+    }
+
+    arr[randomNum].classList.add('transform');
+    paulSelectedOption = choices[randomNum];
+}
 
 const clickHandler = (event, choice) => {
     const selectedOption = event.target;
@@ -143,7 +152,7 @@ function game(selectedOption, choice) {
     }, 2000);
 
     setTimeout(() => {
-        player2()
+        player2(choice)
     }, 3000);
 
     setTimeout(() => {
