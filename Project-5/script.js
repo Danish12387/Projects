@@ -9,8 +9,8 @@ const option3 = document.getElementById('option_3');
 const player2Div = document.querySelector('.player_2');
 const myOptionDiv = document.querySelector(".options_div");
 const restartBtn = document.getElementById('restart_btn');
-const youScores = document.getElementById('you_scores');
-const paulScores = document.getElementById('paul_scores');
+const userScores = document.getElementById('you_scores');
+const computerScores = document.getElementById('computer_scores');
 const quitBtn = document.getElementById('quit_btn');
 const popupDiv = document.getElementById('popup_div');
 const cancel = document.querySelector('.cancel');
@@ -24,26 +24,26 @@ const playAgainSug = document.getElementById('play_again_sug');
 const rock = document.getElementById('rock')
 const paper = document.getElementById('paper')
 const scissor = document.getElementById('scissor')
-let setYouScores = 0;
-let setPaulScores = 0;
-let youSelectedOption;
-let paulSelectedOption;
+let setUserScores = 0;
+let setCompScores = 0;
+let userSelectedOption;
+let CompSelectedOption;
 let IsTrue = false;
 
 quitBtn.addEventListener('click', () => {
     popupDiv.style.display = 'block'
-    mainDiv.classList.add('main_div')
+    mainDiv.classList.add('main_div_before')
 })
 
 cancel.addEventListener('click', () => {
     popupDiv.style.display = 'none'
-    mainDiv.classList.remove('main_div')
+    mainDiv.classList.remove('main_div_before')
 })
 
 okBtn.addEventListener('click', () => {
     startDiv.style.display = 'flex'
     dashboard.style.display = 'none'
-    mainDiv.classList.remove('main_div')
+    mainDiv.classList.remove('main_div_before')
     popupDiv.style.display = 'none'
 })
 
@@ -75,9 +75,6 @@ restartBtn.addEventListener('click', () => {
             options[i].classList.add('transformIs');
             options[i].style.cursor = 'pointer'
         }
-        rock.addEventListener('click', clickHandler);
-        paper.addEventListener('click', clickHandler);
-        scissor.addEventListener('click', clickHandler);
         IsTrue = false;
     }
 })
@@ -100,7 +97,7 @@ function player2(choice) {
     }
 
     arr[randomNum].classList.add('transform');
-    paulSelectedOption = choices[randomNum];
+    CompSelectedOption = choices[randomNum];
 }
 
 const clickHandler = (event, choice) => {
@@ -122,9 +119,6 @@ scissor.addEventListener('click', (e) => {
 });
 
 function game(selectedOption, choice) {
-    rock.removeEventListener('click', clickHandler);
-    paper.removeEventListener('click', clickHandler);
-    scissor.removeEventListener('click', clickHandler);
 
     for (let i = 0; i < options.length; i++) {
         options[i].classList.remove('transform');
@@ -133,7 +127,7 @@ function game(selectedOption, choice) {
     }
 
     selectedOption.classList.add('transform');
-    youSelectedOption = choice;
+    userSelectedOption = choice;
     suggestion.innerHTML = 'Good!'
 
     setTimeout(() => {
@@ -141,14 +135,14 @@ function game(selectedOption, choice) {
             item.classList.remove('transform');
         })
 
-        suggestion.innerHTML = "Now Paul's Turn!"
+        suggestion.innerHTML = "Now Computer's Turn!"
         myOptionDiv.style.display = 'none';
         player2Div.style.display = 'flex';
 
     }, 1000);
 
     setTimeout(() => {
-        suggestion.innerHTML = "Paul is choosing!"
+        suggestion.innerHTML = "Computer is choosing!"
     }, 2000);
 
     setTimeout(() => {
@@ -167,15 +161,15 @@ function game(selectedOption, choice) {
 
 function win() {
     suggestion.innerHTML = 'You Win!'
-    setYouScores++
-    youScores.innerHTML = setYouScores;
+    setUserScores++
+    userScores.innerHTML = setUserScores;
     playAgainSug.style.display = 'block'
 }
 
 function lose() {
-    suggestion.innerHTML = 'Paul Win!'
-    setPaulScores++
-    paulScores.innerHTML = setPaulScores;
+    suggestion.innerHTML = 'Computer Win!'
+    setCompScores++
+    computerScores.innerHTML = setCompScores;
     playAgainSug.style.display = 'block'
 }
 
@@ -186,7 +180,7 @@ function draw() {
 
 function checkWinner() {
 
-    switch (youSelectedOption + paulSelectedOption) {
+    switch (userSelectedOption + CompSelectedOption) {
         case 'RS':
         case 'PR':
         case 'SP':
