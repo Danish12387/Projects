@@ -1,0 +1,206 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    #backgroundImage {
+      z-index: 1;
+    }
+
+    #backgroundImage:before {
+      content: "";
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-image: url("https://t4.ftcdn.net/jpg/01/49/99/29/500_F_149992927_WYyu5zQKzHUlrvSf1IHvGjzHYeaFviLI.jpg ");
+      background-size: auto;
+      min-height: 100%;
+      min-width: 100%;
+      opacity: 0.2;
+      filter: alpha(opacity=100);
+    }
+
+    body {
+      background-color: white;
+    }
+
+    .button {
+      text-decoration: none;
+      font-weight: 600;
+      color: #6666ff;
+      font-family: arial;
+    }
+
+    header {
+      background-color: black;
+      color: white;
+      width: 100%;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: black;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+      float: left;
+      overflow: hidden;
+    }
+
+    .dropdown .dropbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+      background-color: grey;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      float: none;
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f8bbd0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-family: Optima, sans-serif;
+      color: black;
+      font-weight: bold;
+      display: inline;
+      text-align: center;
+    }
+
+    .logo {
+      text-align: left;
+      height: 80px;
+      width: 150px;
+      float: left;
+      cursor: pointer;
+    }
+
+    .search-area {
+      margin-left: 310px;
+      border-radius: 10px;
+      width: 150px;
+      border-style: double;
+    }
+
+    .btn-search {
+      background-color: black;
+      color: white;
+      padding: 4px 14px;
+      border: 2px solid grey;
+      border-radius: 10px;
+      font-size: 15px;
+      cursor: pointer;
+      height: 40px;
+      text-align: center;
+      margin-left: 1250px;
+      margin-top: -45px;
+    }
+
+    .btn-search:hover {
+      background-color: white;
+      color: black;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img class="logo" src="Logo.jpg" alt="Shop Logo">
+    <h1>TREND STOCK</h1>
+  </header>
+
+  <div class="navbar">
+    <a class="active" href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+    <a href="signup.html"><i class="fa fa-fw fa-user"></i>Signup</a>
+    <a href="about.html"><i class="fa fa-sticky-note"></i> About Us</a>
+
+    <div class="dropdown">
+      <button class="dropbtn"><i class="fa fa-fw fa-bell-o"></i>BEST-SELLERS
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="tees.html">Tops</a>
+        <a href="watches.html">Watches</a>
+        <a href="laptops.html">Laptops</a>
+        <a href="mobiles.html">Mobiles</a>
+      </div>
+    </div>
+    <a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+    <input class="search-area" type="text" name="text" placeholder="search here">
+    <button type="button" class="btn-search">Search</button>
+  </div>
+
+
+  <div id="backgroundImage">
+    <br><br>
+    <center>
+      <div class="subtitle">
+        For any enquiries contact of customer care (Open 24/7)
+        <center>0347 2311996</center><br><br>
+        <center>Contact through email</center>
+        <center>trendstock7592@gmail.com</center>
+        <center>OR</center>
+        <center>as2204412@gmail.com</center>
+        <center>And Also You Can Track Our Location By Using Google Maps</center>
+      </div>
+    </center>
+  </div><br>
+ <center>
+    <div id="map-container" class="z-depth-1-half map-container" style="height: 500px">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.122466195512!2d67.01082171447759!3d24.859666551412875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f555a1bfc1d%3A0x67b2b32773c986a4!2sBMJ%20DIGITAL%20EDUCATION!5e0!3m2!1sen!2s!4v1583129040833!5m2!1sen!2s"
+        width="900" height="450" frameborder="4" style="border:4;" allowfullscreen=""></iframe>
+    </div>
+  </center>

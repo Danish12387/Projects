@@ -1,0 +1,259 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+#backgroundImage{z-index: 1;}
+
+#backgroundImage:before {
+   content: "";
+   position: fixed;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url("https://t4.ftcdn.net/jpg/01/49/99/29/500_F_149992927_WYyu5zQKzHUlrvSf1IHvGjzHYeaFviLI.jpg ");
+   background-size: auto;
+   min-height: 100%;
+   min-width: 100%;
+    opacity: 0.2;
+    filter:alpha(opacity=100);
+ }
+
+body{
+  background-color: white;
+}
+.button{
+  text-decoration: none;
+  font-weight: 600;
+  color: #6666ff;
+  font-family: arial;
+}
+header{background-color: black;
+color: white;
+	width: 100%;
+	padding: 15px 0;
+	text-align: center;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8bbd0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.search-area{
+    margin-left: 300px;
+    border-radius: 10px;
+    width: 150px;
+    border-style: double;
+    }
+    .logo{
+  text-align: left;
+  height: 80px;
+  width: 150px;
+  float: left;
+  cursor: pointer;
+}
+</style>
+</head>
+
+
+<body>
+<header>
+  <img class="logo" src="Logo.jpg" alt="Shop Logo">
+  <h1>TREND STOCK</h1>
+</header>
+
+<div class="navbar">
+  <a class="active" href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+  <a href="about.html"><i class="fa fa-sticky-note"></i> About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-fw fa-bell-o"></i>BEST-SELLERS
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="tees.html">Tops</a>
+	  <a href="watches.html">Watches</a>
+	  <a href="laptops.html">Laptops</a>
+	  <a href="mobiles.html">Mobiles</a>
+    </div>
+  </div> 
+<input class="search-area" type="text" name="text" placeholder="search here">
+ <button class="search-btn"> <i class="fa fa-search"></i>Search</button>
+<a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+
+ 
+</div>
+<div id="backgroundImage">
+<ul class="resources">
+  <li>
+    <img src="images/tee4.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Tommy Hilfiger Girls' Plain Regular Fit T-Shirt<br></a>
+	  <h>by Tommy Hilfiger</h>
+      <p class="price">Rs.999<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+  </li>
+  <li>
+    <img src="images/tee5.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Lee Women's Regular Fit T-Shirt<br></a>
+	  <h>by Lee</h>
+      <p class="price">Rs.999<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+  </li>
+  <li>
+    <img src="images/tee6.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Cherokee Women's Shirt-<br></a>
+		<h>by Cherokee</h>
+      <p class="price">Rs.699<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+  <li>
+    <img src="images/tee7.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Vvoguish Women's Star Printed Top<br></a>
+	<h>by Vvoguish</h>
+      <p class="price">Rs.470<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+  
+  <li>
+    <img src="images/tee8.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Cotton Women'S Half Sleeve Casual Printed Friends Tees By R'Squarre<br></a>
+	<h>by R'Squarre</h>
+      <p class="price">Rs.480<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+  <li>
+    <img src="images/tee9.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Miss Chase Women's Black Pearl Crop Top<br></a>
+      <h>by Miss Chase</h>
+      <p class="price">Rs.829 </p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+  </li>
+  <li>
+    <img src="images/tee10.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Miss Chase Women's Navy Blue and White Cotton Top<br></a>
+	  <h>by Miss Chase</h>
+      <p class="price">Rs.649<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+  </li>
+  <li>
+    <img src="images/tee11.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">POISON IVY Women's Casual Full Sleeve Floral Print Women's Multicolor Beige Top<br></a>
+	  <h>by POISON IVY</h>
+      <p class="price">Rs.549<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+  </li>
+  <li>
+    <img src="images/tee12.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">AANIA Women's Cotton Embroidered Top<br></a>
+	  <h>by AANIA</h>
+      <p class="price">Rs.469<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+  </li>
+  <li>
+    <img src="images/tee13.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Miss Chase Women's Black and White Patch Striped Top<br></a>
+	  <h>by Miss Chase</h>
+      <p class="price">Rs.739<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+  </li>
+  
+
+</ul>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,279 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css">
+<style>
+#backgroundImage{z-index: 1;}
+
+#backgroundImage:before {
+   content: "";
+   position: fixed;
+   z-index: -1;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background-image: url("https://t4.ftcdn.net/jpg/01/49/99/29/500_F_149992927_WYyu5zQKzHUlrvSf1IHvGjzHYeaFviLI.jpg ");
+   background-size: auto;
+   min-height: 100%;
+   min-width: 100%;
+    opacity: 0.2;
+    filter:alpha(opacity=100);
+ }
+
+body{
+  background-color: white;
+}
+.button{
+  text-decoration: none;
+  font-weight: 600;
+  color: #6666ff;
+  font-family: arial;
+}
+header{background-color: black;
+color: white;
+	width: 100%;
+	padding: 15px 0;
+	text-align: center;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+	color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;    
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f8bbd0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.resources1 li img{
+			width: 220px;
+			height: 180px;
+			border: 1px solid LightGrey;
+			padding: 10px;
+			box-shadow: 10px 10px 5px grey; 
+			
+}
+.resources1 li{
+		padding:20px;
+		width: 250px;
+		display: inline-table;
+		vertical-align: baseline;
+}
+.resources1{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+.logo{
+  text-align: left;
+  height: 80px;
+  width: 150px;
+  float: left;
+  cursor: pointer;
+}
+.search-area{
+    margin-left: 300px;
+    border-radius: 10px;
+    width: 150px;
+    border-style: double;
+    }
+</style>
+</head>
+
+
+<body>
+<header>
+  <img class="logo" src="Logo.jpg" alt="Shop Logo">
+  <h1>TREND STOCK</h1>
+</header>
+
+<div class="navbar">
+  <a class="active" href="home.html"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a> 
+  <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+  <a href="about.html"><i class="fa fa-sticky-note"></i> About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn"><i class="fa fa-fw fa-bell-o"></i>BEST-SELLERS
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="tees.html">Tops</a>
+	  <a href="watches.html">Watches</a>
+	  <a href="laptops.html">Laptops</a>
+	  <a href="mobiles.html">Mobiles</a>
+    </div>
+  </div> 
+<input class="search-area" type="text" name="text" placeholder="search here">
+ <button class="search-btn" <i class="fa fa-search"></i>Search</button>
+<a href="#"><i class="fa fa-shopping-cart"></i> Cart</a>
+
+ 
+</div>
+<div id="backgroundImage">
+<ul class="resources1">
+  <li>
+    <img src="images/l1.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">HP 15-bs145tu 15.6-inch FHD Laptop, Sparkling Black<br></a>
+      <p class="price">Rs.41,990<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+  </li>
+  <li>
+    <img src="images/l2.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">HP 15 - BS662TU 15.6-inch FHD Laptop, Natural Silver<br></a>
+      <p class="price">Rs.31,990<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+  <li>
+    <img src="images/l3.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Lenovo Ideapad 320E-15ISK 320E 15.6-inch Laptop Black<br></a>
+      <p class="price">Rs.26,490<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+  <li>
+    <img src="images/l4.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Apple MacBook Air MQD32HN/A 13.3-inch Laptop 2017<br></a>
+      <p class="price">Rs.63,490<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+
+  <li>
+    <img src="images/l5.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">HP Envy 13-ah0044tu 2018 13.3-inch Laptop, Natural Silver<br></a>
+      <p class="price">Rs.86,990<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+
+  <li>
+    <img src="images/l6.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">DELL Inspiron 5370 13.3-inch FHD Laptop, Silver<br></a>
+      <p class="price">Rs.63,925<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+
+  <li>
+    <img src="images/l7.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Asus Vivobook X542UN-DM087T Laptop<br></a>
+      <p class="price">Rs.53,599<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+
+  <li>
+    <img src="images/l8.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button"> Apple MacBook Air MMGF2HN/A 13.3-inch Laptop<br></a>
+      <p class="price">Rs.48,000<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+
+  <li>
+    <img src="images/l9.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Micromax Canvas Lapbook L1161 11.6-inch Laptop<br></a>
+      <p class="price">Rs.20,099<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+
+  <li>
+    <img src="images/l10.jpg">
+    <br><br>
+
+    <div class="resource_info">
+      <a href="#" class="button">Lenovo 80XH01XBIN 15.6-inch Laptop<br></a>
+      <p class="price">Rs.39,499<br></p>
+      <h2><a href="#"><i class="fa fa-shopping-cart"></i>Add to Cart<br><br></a></h2>
+
+  </li>
+
+
+</ul>
+</div>
+</body>
+</html>
+
+

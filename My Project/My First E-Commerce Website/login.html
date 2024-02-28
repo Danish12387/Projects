@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<title>LOGIN</title>
+<style>
+body{
+	background-repeat:no-repeat;
+}
+.loginbox p{
+	margin:0;
+	padding-left:20px;
+	font-weight:bold;	
+	font-size:20px;
+	font-family:sans-serif;
+}
+.loginbox input{
+	width:100%;
+	margin-bottom:20px;
+
+}
+.loginbox input[type="text"],input[type="password"]
+{
+	border:none;
+	border-bottom:1px solid #fff;
+	margin-left:20px;
+	margin-right:20px;
+	background:transparent;
+	outline:none;
+	height:40px;
+	width:85%;
+	color:black;
+	font-size:20px;
+}
+.loginbox input[type="submit"]
+{
+	border:none;
+	outline:none;
+	height:30px;
+	width:85%;
+	background:#fb2525;
+	color:#fff;
+	font-size:24px;
+	border-radius:20px;
+}
+.loginbox input[type="submit"]:hover
+{
+	cursor:pointer;
+	background:#ff66ff;
+	color:#000;
+}
+.loginbox a{
+	text-decoration:none;
+	font-size:20px;
+	line-height:14px;
+	color:darkgrey;
+	padding-left:20px;
+	font-family:sans-serif;
+}
+.loginbox a:hover{
+	color:#ff4500;
+}
+.loginbox{
+	background:#263238;
+	color:#fff;
+	margin-top:50px;
+	margin-left:550px;
+	margin-right:550px;	
+	height:450px;
+	width:320px;
+}
+.loginbox::after {
+  content: "";
+  background: url(https://t4.ftcdn.net/jpg/01/49/99/29/500_F_149992927_WYyu5zQKzHUlrvSf1IHvGjzHYeaFviLI.jpg);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+h1{
+	padding-top:50px;
+	font-size:30px;
+	color:#ff5252 ;
+}
+.default{
+	width:90px;
+	height:90px;
+	border-radius:50%;
+	position:absolute;
+	top:20px;
+	left:calc(50% - 100px);
+}
+.newbtn{
+	text-align: right;
+	margin-left: 100px;
+	height: 30px;
+	background-color: black;
+    color: white;
+    padding: 4px 14px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    font-size: 15px;
+	cursor: pointer;
+	
+}
+.newbtn:hover{
+      background-color: lightgrey;
+      color: black;
+      text-transform: uppercase;
+	}
+	.submitbtn:hover{
+		background-color: lightgrey;	
+	}
+</style>
+<body>
+<br>
+
+
+<div class="loginbox">
+	<img src="default1.jpg" class="default">
+	<center><h1>Login Here!</h1></center>
+	<br>
+	<form>
+		<p>Username</p>
+		<input type="text" name="" placeholder="Enter username" >
+		<p>Password</p>
+		<input type="password" name="" placeholder="Enter password">
+		<br>
+		<center><input class="submitbtn" type="submit" name="" value="Submit"></center>
+		<center><a href="#">Forgot Password?</a><br></center>
+		<br>
+		<center><a href="./signup.html">Create a New Account</a></p></center><br>
+		<button class="newbtn"><a href="home.html">Go Back</a></button>
+	</form>
+	</div>
+</body>
+</html>
