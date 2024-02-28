@@ -1,10 +1,13 @@
 body {
     font-family: sans-serif;
-    height: 95vh;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
 
+/* ============================================
+            First Start Page Styling:
+============================================ */
 
 .start_main {
     display: flex;
@@ -12,7 +15,7 @@ body {
     justify-content: center;
     height: 100%;
     width: 100%;
-    display: none;
+    /* display: none; */
 }
 
 .start_div {
@@ -26,17 +29,58 @@ body {
     align-items: center;
 }
 
-.start_div #instructions_div {
+#start_upper_div img {
+    width: 300px;
+}
+
+#start_upper_div h2 {
+    text-align: center;
+    margin: 0;
+}
+
+#start_upper_div h3 {
+    text-align: center;
+}
+
+#start_upper_div button {
+    width: 300px;
+    height: 48px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(250, 208, 0);
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    margin-top: 20px;
+}
+
+#start_upper_div button:hover {
+    transform: scale(1.03);
+    background-color: rgb(250, 195, 0);
+    box-shadow: 1px 2px 6px 1px rgb(134, 134, 134);
+}
+
+#start_upper_div span {
+    text-align: center;
+    color: grey;
+    cursor: pointer;
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#instructions_div {
     display: none;
     height: 300px;
     margin: auto;
 }
 
-.start_div #instructions_div h1 {
+#instructions_div h1 {
     text-align: center;
 }
 
-.start_div #instructions_div #btn {
+#instructions_div #btn {
     height: 40px;
     width: 100px;
     border: none;
@@ -50,57 +94,19 @@ body {
     border: none !important;
 }
 
-.start_div #instructions_div #btn:hover {
+#instructions_div #btn:hover {
     background-color: rgb(0, 134, 223);
 }
 
-.start_div img {
-    height: 300px;
-    width: 300px;
-}
+/* ============================================
+            Main Page Styling:
+============================================ */
 
-.start_div #start_upper_div h2 {
-    text-align: center;
-    margin: 0;
-}
-
-.start_div #start_upper_div h3 {
-    text-align: center;
-}
-
-.start_div span {
-    text-align: center;
-    color: grey;
-    cursor: pointer;
-    display: block;
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.start_div #start_upper_div button {
-    width: 300px;
-    height: 48px;
-    border-radius: 50px;
-    border: none;
-    background-color: rgb(250, 208, 0);
-    font-size: 18px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all .2s ease-out;
-    margin-top: 20px;
-}
-
-.start_div #start_upper_div button:hover {
-    transform: scale(1.03);
-    background-color: rgb(250, 195, 0);
-    box-shadow: 1px 1px 6px 1px rgb(95, 95, 95);
-}
-
-.main_div {
+.main_div_before {
     width: 100%;
 }
 
-.main_div::before{
+.main_div_before::before {
     content: '';
     background-color: rgba(0, 0, 0, 0.2);
     position: absolute;
@@ -118,11 +124,28 @@ body {
     display: flex;
     width: 90%;
     margin: auto;
-    height: 400px;
-    display: flex;
+    /* height: 400px; */
+    display: none;
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.dashboard_main .upper_div {
+    background-color: rgb(247, 230, 0);
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    box-shadow: 1px 2px 5px 1px grey;
+    width: 100%;
+    height: 110px;
+}
+
+.dashboard_main .upper_div div{
+    min-width: 100px;
 }
 
 .btns {
@@ -143,7 +166,7 @@ body {
     margin-left: 36%;
 }
 
-#popup_div{
+#popup_div {
     border: none;
     box-shadow: 1px 1px 5px 1px grey;
     height: 140px;
@@ -157,7 +180,7 @@ body {
     z-index: 1000;
 }
 
-#popup_div h2{
+#popup_div h2 {
     text-align: center;
     margin-bottom: 40px;
 }
@@ -173,12 +196,13 @@ body {
     margin: 0 15px;
     font-size: 15px;
 }
-.cancel{
+
+.cancel {
     background-color: white;
     border: 1px solid black;
 }
 
-.cancel:hover{
+.cancel:hover {
     background-color: rgb(238, 238, 238);
 }
 
@@ -192,41 +216,31 @@ body {
     background-color: rgb(0, 134, 223);
 }
 
-.dashboard_main{
-    width: 80%; 
+.dashboard_main {
+    width: 80%;
     margin-top: 50px;
 }
 
-.dashboard .dashboard_main .upper_div {
-    background-color: rgb(238, 222, 0);
-    border-radius: 20px;
+.options_div {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    margin-top: 20px;
-    box-shadow: 1px 1px 5px 1px grey;
-    width: 100%;
-    height: 110px;
-}
-
-.options_div{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 600px;
+    width: 50%;
     margin: auto;
     margin-top: 50px;
 }
 
-.options_div div{
+.options_div div {
     text-align: center;
 }
 
 .player_2 {
-    display: flex;
+    display: flex; 
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
-    width: 600px;
+    width: 50%;
     margin: auto;
     display: none;
     margin-top: 50px;
@@ -237,14 +251,12 @@ body {
 }
 
 .same {
-    height: 120px;
-    width: 110px;
+    width: 120px;
     box-shadow: 1px 1px 5px 1px grey;
-    /* color: white; */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 100%;
     transition: all .2s ease-out;
     cursor: pointer;
     border: 2px solid rgb(114, 114, 114);
@@ -261,7 +273,7 @@ body {
     cursor: none;
 }
 
-#suggestion{
+#suggestion {
     width: 270px;
     text-align: center;
 }
@@ -270,6 +282,6 @@ body {
     font-size: 32px;
 }
 
-#play_again_sug{
+#play_again_sug {
     display: none;
 }
